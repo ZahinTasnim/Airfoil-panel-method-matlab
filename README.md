@@ -2,7 +2,7 @@
 
 Inviscid, incompressible aerodynamic analysis of the **Eppler E420** high-lift airfoil using a **linear-strength vortex-panel method** written from scratch in MATLAB. The solver computes the surface pressure distribution $C_p(x/c)$ and the lift curve $C_l(\alpha)$, and is validated against thin-airfoil theory on the NACA 0012.
 
-This project provides the aerodynamic baseline for my work on [auxetic structures for morphing wings](https://github.com/your-handle/morphing-wing-auxetics), which uses the same Eppler E420 section.
+This project provides the aerodynamic baseline for my work on [auxetic structures for morphing wings], which uses the same Eppler E420 section.
 
 <p align="center"><img src="figures/fig_cp.png" width="560"></p>
 
@@ -40,13 +40,6 @@ Two problems came up during development and are worth recording:
 
 This is a potential-flow model: it neglects viscosity, so it **does not predict stall, drag, or boundary-layer separation**, and $C_l$ keeps rising linearly with $\alpha$. It is accurate for pre-stall lift and pressure distribution; coupling it to a boundary-layer solver (as XFOIL does) would be the natural next step.
 
-## How to run
-
-Requires MATLAB R2019b+ (or free MATLAB Online). No toolboxes needed.
-
-```matlab
->> runAirfoil          % Cp plot + lift curve for the Eppler E420
->> validateNACA0012    % validation against thin-airfoil theory
 ```
 
 ## Files
